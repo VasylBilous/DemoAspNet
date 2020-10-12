@@ -1,0 +1,16 @@
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\DAL.dll.config
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\DAL.dll
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\DAL.pdb
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\EntityFramework.dll
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\EntityFramework.xml
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\obj\Debug\DAL.dll
+D:\STUDY\ITSTEP\ASP NET\Project\DAL\obj\Debug\DAL.pdb

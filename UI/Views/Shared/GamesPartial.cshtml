@@ -1,0 +1,41 @@
+﻿@using System.Web.Optimization;
+@model IEnumerable<UI.Models.GameViewModel>
+
+@Styles.Render("~/Content/card");
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-4">
+            <div class="card" style="text-align:center">
+                <div class="card-header">
+                    <h5 class="card-title">@item.Name</h5>
+                    <img src="@item.Image" width="200" alt="" />
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("Buy", "Game", new { id = item.Id }, FormMethod.Post))
+                    {
+                        <input type="submit" value="Buy" class="btn btn-warning" onclick="changeCounter()" />
+                    }
+                    <p class="card-text">@item.Developer</p>
+                    <p class="card-text">@item.Genre</p>
+                    <p class="card-text">@item.Description</p>
+                    <p class="card-text">@item.Year</p>
+                    <p class="card-text">@item.Price</p>
+                    <p class="card-text">@item.Available</p>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <p class="card-text">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                            | @Html.ActionLink("Details", "Details", new { id = item.Id })
+                        </p>
+                        using (Html.BeginForm("Delete", "Game", new { id = item.Id }))
+                        {
+                            <button class="btn btn-warning">Delete</button>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

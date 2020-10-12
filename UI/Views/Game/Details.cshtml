@@ -1,0 +1,79 @@
+﻿@model UI.Models.GameViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+    <div>
+        <br />
+        <dl class="dl-horizontal row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+
+            <dd class="col-sm-9">
+                <img src="@Model.Image" width="200" alt="" />
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Year)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Year)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Genre)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Genre)
+            </dd>
+
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Developer)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Developer)
+            </dd>
+
+        </dl>
+
+        <div>
+            <p>
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink("BUY", "Buy", new { id = Model.Id }, new { @class = "btn btn-warning" })
+            </p>
+        </div>
+
+
+    </div>
+

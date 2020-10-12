@@ -1,0 +1,32 @@
+﻿@using System.Web.Optimization;
+@model IEnumerable<UI.Models.GameViewModel>
+
+
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+@{
+    string[] Sorts = @ViewBag.Sorts as string[];
+}
+
+@{
+    Html.RenderPartial("Header", Sorts);
+}
+
+@Scripts.Render("~/scripts/custom")
+
+@{
+    Html.RenderPartial("Sidebar");
+}
+
+<div class="dashboard-wrapper pt-4 form-group" id="games">
+    @{
+        Html.RenderPartial("GamesPartial", Model);
+    }
+</div>
+
+
+@{
+    Html.RenderPartial("Footer");
+}
+

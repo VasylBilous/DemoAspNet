@@ -1,0 +1,70 @@
+﻿@model UI.Models.UserCartViewModel
+
+@{
+    ViewBag.Title = "CheckOut";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="container">
+    <div class="card">
+        <table class="table table-hover shopping-cart-wrap">
+            <thead class="text-muted">
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col" width="120">Quantity</th>
+                    <th scope="col" width="120">Price</th>
+                    <th scope="col" width="200" class="text-right">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Games)
+                {
+                    <tr>
+                        <td>
+                            <figure class="media">
+                                <div class="img-wrap"><img src="@item.Game.Image" class="img-thumbnail img-sm"></div>
+                                <figcaption class="media-body">
+                                    <h6 class="title text-truncate">@item.Game.Name</h6>
+                                    <dl class="param param-inline small">
+                                        <dt>Available: </dt>
+                                        <dd>@item.Game.Available</dd>
+                                    </dl>
+                                    <dl class="param param-inline small">
+                                        <dt>Developer: </dt>
+                                        <dd>@item.Game.Developer</dd>
+                                    </dl>
+                                    <dl class="param param-inline small">
+                                        <dt>Genre: </dt>
+                                        <dd>@item.Game.Genre</dd>
+                                    </dl>
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <dl class="param param-inline small">
+                                <dt>Quantity: </dt>
+                                <dd>@item.Quantity</dd>
+                            </dl>
+                        </td>
+                        <td>
+                            <div class="price-wrap">
+                                <var class="price">USD @using{item.Quantity * item.Game.Price}</var>
+                                <small class="text-muted">(USD @item.Game.Price each)</small>
+                            </div>
+                        </td>
+                        <td class="text-right">
+                            <a href="" class="btn btn-outline-danger"> × Remove</a>
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col" width="120">@Model.Games.Sum(x => x.Quantity)</th>
+                    <th scope="col" width="120">@Model.Games.Sum(x => x.Game.Price * x.Quantity)</th>
+                    <th scope="col" width="200" class="text-right"></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

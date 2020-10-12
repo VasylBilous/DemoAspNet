@@ -1,0 +1,29 @@
+﻿@model IEnumerable<UI.Models.DeveloperViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-4">
+            <p class="card-text" style="margin-top:10px">
+                @item.Name  
+                @using (Html.BeginForm("Delete", "Developer", new { id = item.Id }))
+                {
+                    <button class="btn btn-warning">Delete</button>
+                }
+            </p>
+        </div>
+    }
+</div>
+
+<form method="POST" style="margin-top:10px">
+    @Html.ActionLink("Back to Create", "Create", "Game", null, new { @class = "btn btn-warning" })
+    <input type="text" id="newDev" name="newDev" placeholder="Enter new dev" class="form-control custom" style="width:300px" />
+    <input type="submit" class="form-control custom" />
+</form>
+
+

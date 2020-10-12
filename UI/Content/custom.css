@@ -1,0 +1,10 @@
+﻿.custom {
+    width: 100px;
+    margin-left: 20px;
+    height: 40px;
+    display: inline;
+}
+
+#imagePC {
+    display: none;
+}
