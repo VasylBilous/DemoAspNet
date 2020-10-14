@@ -14,3 +14,19 @@ D:\STUDY\ITSTEP\ASP NET\Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\STUDY\ITSTEP\ASP NET\Project\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\STUDY\ITSTEP\ASP NET\Project\DAL\obj\Debug\DAL.dll
 D:\STUDY\ITSTEP\ASP NET\Project\DAL\obj\Debug\DAL.pdb
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\DAL.dll.config
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\DAL.dll
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\DAL.pdb
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Админ\Desktop\step\Project\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Админ\Desktop\step\Project\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Админ\Desktop\step\Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Админ\Desktop\step\Project\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Админ\Desktop\step\Project\DAL\obj\Debug\DAL.dll
+C:\Users\Админ\Desktop\step\Project\DAL\obj\Debug\DAL.pdb

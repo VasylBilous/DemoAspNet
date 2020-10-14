@@ -28,6 +28,25 @@ namespace UI.Controllers
         }
         public ActionResult Index()
         {
+            var cart = Session["UserCart"] as UserCartViewModel;
+
+            if (cart == null)
+            {
+                cart = new UserCartViewModel();
+                var claimsIdentity = User.Identity as ClaimsIdentity;
+                if (claimsIdentity != null)
+                {
+                    var userIdClaim = claimsIdentity.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier);
+                    if (userIdClaim != null)
+                    {
+                        cart.UserId = userIdClaim.Value;
+                    }
+                }
+
+                Session["CartCount"] = 0;
+                Session["UserCart"] = cart;
+            }
+
             ViewBag.Genres = gameService.GetAllGenres();
             ViewBag.Developers = gameService.GetAllDevs();
             ViewBag.Sorts = sorts;
@@ -178,20 +197,6 @@ namespace UI.Controllers
         {
             var cart = Session["UserCart"] as UserCartViewModel;
 
-            if (cart == null)
-            {
-                cart = new UserCartViewModel();
-                var claimsIdentity = User.Identity as ClaimsIdentity;
-                if (claimsIdentity != null)
-                {
-                    var userIdClaim = claimsIdentity.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier);
-                    if (userIdClaim != null)
-                    {
-                        cart.UserId = userIdClaim.Value;
-                    }
-                }
-            }
-
             var game = gameService.ReserveOrReturnNull(id);
             if (game != null)
             {
@@ -209,7 +214,7 @@ namespace UI.Controllers
             }
 
             Session["UserCart"] = cart;
-            Session["CartCount"] = cart.GamesInCart.Count;
+            Session["CartCount"] = cart.GamesInCart.Sum(x => x.Quantity);
             return RedirectToAction("Index");
         }
         public ActionResult Search(string searchInput)

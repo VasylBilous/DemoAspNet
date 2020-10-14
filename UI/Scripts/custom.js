@@ -23,7 +23,4 @@ function swapType() {
     }
 }
 
-function changeCounter() {
-    var cartCount = '<%= Session["CartCount"] %>';  
-    document.getElementById("cartCounter").innerHTML = cartCount;
-}
+

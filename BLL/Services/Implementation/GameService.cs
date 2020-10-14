@@ -52,7 +52,7 @@ namespace BLL.Services.Implementation
         public IEnumerable<string> GetAllDevs()
         {
             return repoDev.GetAll().Select(x => x.Name);
-        }    
+        }
         public IEnumerable<string> GetAllGenres()
         {
             return repoGenre.GetAll().Select(x => x.Name);
