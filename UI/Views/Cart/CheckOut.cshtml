@@ -17,7 +17,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model.Games)
+                @foreach (var item in Model.GamesInCart)
                 {
                     <tr>
                         <td>
@@ -48,7 +48,8 @@
                         </td>
                         <td>
                             <div class="price-wrap">
-                                <var class="price">USD @using{item.Quantity * item.Game.Price}</var>
+                                <var class="price">@item.Game.Price * @item.Quantity
+                             </var >
                                 <small class="text-muted">(USD @item.Game.Price each)</small>
                             </div>
                         </td>
@@ -59,8 +60,8 @@
                 }
                 <tr>
                     <th scope="col"></th>
-                    <th scope="col" width="120">@Model.Games.Sum(x => x.Quantity)</th>
-                    <th scope="col" width="120">@Model.Games.Sum(x => x.Game.Price * x.Quantity)</th>
+                    <th scope="col" width="120">@Model.GamesInCart.Sum(x => x.Quantity)</th>
+                    <th scope="col" width="120">@Model.GamesInCart.Sum(x => x.Game.Price * x.Quantity)</th>
                     <th scope="col" width="200" class="text-right"></th>
                 </tr>
             </tbody>
