@@ -10,5 +10,7 @@ namespace BLL.Services.Abstraction
     public interface ICartService
     {
         void AddUserCart(UserCart cart);
+        void EditUserCart(UserCart cart);
+        void PlaceOrder(OrderDetails order);
     }
 }

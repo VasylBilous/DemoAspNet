@@ -48,13 +48,17 @@
                         </td>
                         <td>
                             <div class="price-wrap">
-                                <var class="price">@item.Game.Price * @item.Quantity
-                             </var >
+                                <var class="price">
+                                    @item.Game.Price * @item.Quantity
+                                </var>
                                 <small class="text-muted">(USD @item.Game.Price each)</small>
                             </div>
                         </td>
                         <td class="text-right">
-                            <a href="" class="btn btn-outline-danger"> × Remove</a>
+                            @using (Html.BeginForm("RemoveFromCart", "Cart", new { id = item.Id }))
+                            {
+                                <button class="btn btn-outline-danger">× Remove</button>
+                            }
                         </td>
                     </tr>
                 }
@@ -63,6 +67,12 @@
                     <th scope="col" width="120">@Model.GamesInCart.Sum(x => x.Quantity)</th>
                     <th scope="col" width="120">@Model.GamesInCart.Sum(x => x.Game.Price * x.Quantity)</th>
                     <th scope="col" width="200" class="text-right"></th>
+                </tr>
+                <tr>
+                    <th scope="col">  @Html.ActionLink("Back to Main", "Index", "Game", null, new { @class = "btn btn-warning" })</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">@Html.ActionLink("Confirm order", "MakeOrder", null, new { @class = "btn btn-warning" })</th>
                 </tr>
             </tbody>
         </table>

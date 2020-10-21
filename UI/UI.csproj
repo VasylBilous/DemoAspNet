@@ -385,6 +385,8 @@
     <Content Include="Views\Auth\Register.cshtml" />
     <Content Include="Views\Auth\Account.cshtml" />
     <Content Include="Views\Cart\CheckOut.cshtml" />
+    <Content Include="Views\Cart\MakeOrder.cshtml" />
+    <Content Include="Views\Cart\ConfirmedOrder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

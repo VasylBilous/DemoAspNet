@@ -196,6 +196,8 @@ namespace UI.Controllers
         public ActionResult Buy(int id)
         {
             var cart = Session["UserCart"] as UserCartViewModel;
+            if (cart == null)
+                cart = new UserCartViewModel();
 
             var game = gameService.ReserveOrReturnNull(id);
             if (game != null)

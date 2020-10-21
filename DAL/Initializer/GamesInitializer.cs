@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Initializer
 {
-    public  class GamesInitializer:DropCreateDatabaseAlways<ApplicationContext>
+    public class GamesInitializer : DropCreateDatabaseAlways<ApplicationContext>
     {
         protected override void Seed(ApplicationContext context)
         {
@@ -34,7 +34,8 @@ namespace DAL.Initializer
                 new Developer{Name = "Valve"},
                 new Developer{Name = "Ghost Games"},
                 new Developer{Name = "Playrix"},
-                new Developer{Name = "Ubisoft"}
+                new Developer{Name = "Ubisoft"},
+                 new Developer{Name = "CD Project"}
             };
 
 
@@ -116,5 +117,5 @@ namespace DAL.Initializer
             context.SaveChanges();
         }
     }
-       
+
 }

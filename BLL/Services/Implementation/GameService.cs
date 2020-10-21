@@ -36,8 +36,22 @@ namespace BLL.Services.Implementation
         public void EditGame(Game model)
         {
             var find = repo.Find(model.Id);
+
             if (find != null)
+            {
+                find.Name = model.Name;
+                find.Available = model.Available;
+                find.Description = model.Description;
+                find.Developer = model.Developer;
+                find.DeveloperId = model.DeveloperId;
+                find.Genre = model.Genre;
+                find.GenreId = model.GenreId;
+                find.Image = model.Image;
+                find.Price = model.Price;
+                find.Year = model.Year;
                 repo.Update(find);
+            }
+
         }
         public void Delete(Game game)
         {
